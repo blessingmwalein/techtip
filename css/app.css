@@ -1,0 +1,9 @@
+
+#enterprise_cont{
+    display: none
+}
+.active-button{
+    background-color: white !important;
+    border-radius: 1px solid orange !important;
+    color: orange !important;
+}

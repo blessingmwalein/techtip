@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+    <meta charset="utf-8">
+    <title>About | TechTip</title>
+    <!-- SEO Meta Tags-->
+    <meta name="description" content="TechTip - Multipurpose Bootstrap Template">
+    <meta name="keywords" content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative">
+    <meta name="author" content="Createx Studio">
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="logo-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg">
+    <meta name="msapplication-TileColor" content="#766df4">
+    <meta name="theme-color" content="#ffffff">
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-family: 'Inter', sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #1c1c1f;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #1c1c1f;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector('.cs-page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+      
+    </script>
+    <!-- Vendor Styles-->
+    <link rel="stylesheet" media="screen" href="vendor/simplebar/dist/simplebar.min.css"/>
+    <link rel="stylesheet" media="screen" href="vendor/lightgallery.js/dist/css/lightgallery.min.css"/>
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css">
+    <!-- Google Tag Manager-->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+      '../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+      })(window,document,'script','dataLayer','GTM-WKV3GT5');
+    </script>
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe src="http://www.googletagmanager.com/ns.html?id=GTM-WKV3GT5" height="0" width="0" style="display: none; visibility: hidden;"></iframe>
+    </noscript>
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+    <main class="cs-page-wrapper">
+      <!-- Sign In Modal-->
+      
+      <!-- Navbar (Solid background)-->
+      <header class="cs-header navbar navbar-expand-lg navbar-light bg-light navbar-sticky" data-scroll-header>
+        <div class="container px-0 px-xl-3">
+          <button
+            class="navbar-toggler ml-n2 mr-2"
+            type="button"
+            data-toggle="offcanvas"
+            data-offcanvas-id="primaryMenu"
+          >
+            <span class="navbar-toggler-icon"></span></button
+          ><a
+            class="navbar-brand order-lg-1 mx-auto ml-lg-0 pr-lg-2 mr-lg-4"
+            href="index.html"
+            ><img
+              class="navbar-floating-logo d-none d-lg-block"
+              width="153"
+              src="img/logo/logo-light.png"
+              alt="TechTip" /><img
+              class="navbar-stuck-logo"
+              width="153"
+              src="img/logo/logo-dark.png"
+              alt="TechTip" /><img
+              class="d-lg-none"
+              width="58"
+              src="img/ttip.png"
+              alt="TechTip"
+          /></a>
+          <div  class="d-flex align-items-center order-lg-3 ml-lg-auto">
+            <a
+            class="btn btn-primary"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            style="opacity: 0;"
+            style="background-color: #080808;"           
+            ><i class="fe-shopping-cart font-size-lg mr-2"></i>Support
+            <span class="d-none d-lg-inline">Us</span></a
+          >
+          </div>
+          <div class="cs-offcanvas-collapse order-lg-2" id="primaryMenu">
+            <div class="cs-offcanvas-cap navbar-box-shadow">
+              <h5 class="mt-1 mb-0">Menu</h5>
+              <button
+                class="close lead"
+                type="button"
+                data-toggle="offcanvas"
+                data-offcanvas-id="primaryMenu"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="cs-offcanvas-body">
+              <!-- Menu-->
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown dropdown-mega">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="services.html"
+                    data-toggle="dropdown"
+                    >Services</a
+                  >
+                  <div class="dropdown-menu" style="margin-left: -100">
+                    <div class="dropdown-column">
+                      <a class="dropdown-item" href="managed_ict_services.html"
+                        ><h6>Managed ICT Services</h6></a
+                      ><a
+                        class="dropdown-item"
+                        href="cyber_security.html"
+                        >Cyber Security</a
+                      ><a class="dropdown-item" href="signiture_system.html"
+                        >Electronic Signiture System</a
+                      ><a
+                        class="dropdown-item"
+                        href="project_management.html"
+                        >Project Management</a
+                      ><a 
+                      class="dropdown-item" 
+                      href="contact.html"
+                        >ICT Consultancy</a
+                      >
+                    </div>
+                    <div class="dropdown-column">
+                      <a class="dropdown-item" href="technology_solutions.html">
+                          <h6>Technology Solutions</h6>
+                      </a><a 
+                      class="dropdown-item" 
+                      href="robot_automation.html">
+                      Robot Process Automation</a>
+                                            <a 
+                      class="dropdown-item" 
+                      href="contact.html">Helpdesk And Technical Communities</a>
+                  </div>
+                  <div class="dropdown-column">
+                      <a class="dropdown-item" 
+                      href="cloud_solutions.html">
+                          <h6>Cloud Solutions</h6>
+                      </a>
+                      <a class="dropdown-item"
+                          href="cloud_solutions.html">Hosted Cloud Services</a>
+                  </div>
+                  <div class="dropdown-column">
+                      <a class="dropdown-item" href="telecom_solutions.html">
+                          <h6>Telecom Solutions</h6>
+                      </a>
+
+                      <a class="dropdown-item" href="https://theconversation.com/africa/topics/cybersecurity-535">Cybersecurity Articles</a><a class="dropdown-item"
+                          href="contact.html">Events And Werbinars</a>
+                  </div>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Intro-->
+      <section class="container my-lg-2 pt-5 pb-lg-7">
+        <div class="row align-items-center">
+                    <div class="col-md-6"><img class="d-block mx-auto" src="img/demo/coworking/tip.png" alt="Techtip">
+          </div>
+          <div style="font-color: #080808; font-family: serif;" class="col-lg-5 py-3 py-lg-0">
+            <h2  class="h3">OUR VISION IS TO BE A KEY CATALYST AND DRIVER OF BUSNESS SUCCESS THROUGH THE IMPLEMENTATION OF RELEVANT ICTs.</h2>
+            <div class="py-4">
+              <p>TechTip provides strategic consulting services to help clients solve business IT and operational problems throughout the entire business cycle and set the foundation for project delivery.
+                We believe technology is a critical business tool that should support profitability. So whether it’s making sure your software is up-to-date, your data is secure, or your employees can get seamless remote access to the company server, TechTip is constantly monitoring the health and connectivity of your system to insure minimum downtime and maximum productivity.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Statistics-->
+      <section class="bg-secondary py-5 mt-n4 mb-6 mt-lg-0 mb-lg-7">
+        <div class="container py-3">
+          <div class="row">
+            <div class="col-md-3 col-sm-6 text-center py-3">
+              <h3 class="display-4">3</h3>
+              <p class="text-muted mb-0">Years of experience</p>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center py-3">
+              <h3 class="display-4">50+</h3>
+              <p class="text-muted mb-0">Employees worldwide</p>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center py-3">
+              <h3 class="display-4">90%</h3>
+              <p class="text-muted mb-0">Positive feedback</p>
+            </div>
+            <div class="col-md-3 col-sm-6 text-center py-3">
+              <h3 class="display-4">15</h3>
+              <p class="text-muted mb-0">Successfully completed projects</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="container mb-5 pb-3 pb-lg-0 mb-lg-7">
+      <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1608676943917{background-image: url(img/partners/01.jpg) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}.vc_custom_1611095281474{background-color: #061a2c !important;}</style><div data-vc-full-width="true" data-vc-full-width-init="false" class="vc_row wpb_row vc_row-fluid cybv2 cybv2_logos vc_custom_1608676943917 vc_row-has-fill"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper">
+<div class="wpb_text_column wpb_content_element  new_hpstyle_section7_carou_text extra-space link-arrow-right">
+<div class="wpb_wrapper"><br><br>
+<h4 style="text-align: center; color: #ffffff; font-family:serif; ">OUR TECHNOLOGY PARTNERS</h4><br>
+<p>
+      <style>
+      div.sp-logo-carousel-pro-section div#sp-logo-carousel-pro604b166fb6044 .sp-lcp-item img{
+        opacity: 1 !important;
+      } 
+      div.sp-logo-carousel-pro-section div#sp-logo-carousel-pro604b166fb6044 .sp-lcp-item:hover img{
+        opacity: 1 !important;
+      } 
+      div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area .sp-lcp-item .sp-lcp-item-border,
+      div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area .sp-lcp-item.sp-lcp-item-border{
+        padding: 0px;
+        background: rgba(10,10,10,0.01);
+      }
+      div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area .sp-lcp-item:hover .sp-lcp-item-border,
+      div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area .sp-lcp-item:hover.sp-lcp-item-border{
+        background: rgba(0,0,0,0.01);
+      }
+      div.sp-logo-carousel-pro-section.layout-carousel div#sp-logo-carousel-pro604b166fb6044 .slick-slide {
+        float: none !important;
+        display: inline-block;
+        vertical-align: middle;
+      }
+      div.sp-logo-carousel-pro-section div#sp-logo-carousel-pro604b166fb6044 [class*="lcp-col"]{
+        vertical-align: middle;
+        margin: 0;
+        box-shadow: none;
+      }
+        div.sp-logo-section-id-604b166fb6044 .bx-viewport{
+        direction: ltr;
+        }.sp-logo-carousel-pro-section #sp-logo-carousel-pro604b166fb6044 .sp-lcpro-readmore-area{
+          text-align: center;
+        }
+        .sp-logo-carousel-pro-section #sp-logo-carousel-pro604b166fb6044 .sp-lcpro-readmore-area .sp-lcpro-readmore{
+          background: transparent;
+          color: #05b3c6;
+          padding: 5px 13px;
+          margin-bottom: 18px;
+          display: inline-block;
+          border-radius: 2px;
+          border: 2px solid #05b3c6 !important;
+          font-size: 14px;font-family: Ubuntu;
+            font-style: normal; font-weight: 400;line-height:20px;
+          letter-spacing: normal;
+          text-transform: none;
+        }
+        .sp-logo-carousel-pro-section #sp-logo-carousel-pro604b166fb6044 .sp-lcpro-readmore-area .sp-lcpro-readmore:hover{
+          background: #05b3c6;
+          color: #ffffff;
+          border: 2px solid #05b3c6 !important;
+        }div.sp-logo-section-id-604b166fb6044 .bx-viewport.bx-viewport { height: auto !important; }
+        div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area .sp-lcp-item .sp-lcp-item-border,
+        div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area .sp-lcp-item.sp-lcp-item-border{
+          border-radius: 100%;
+          z-index: 1;
+          overflow: hidden;
+        }
+          div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area .sp-lcp-item{
+          margin: 0;
+          float: none !important;
+          display: inline-block;
+          vertical-align: middle;}
+        div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area .sp-lcp-item .sp-lcp-item-border,
+        div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area .sp-lcp-item.sp-lcp-item-border{
+          -webkit-box-shadow: 0 0 10px 0 #0a0a0a;
+          -moz-box-shadow:: 0 0 10px 0 #0a0a0a;
+          box-shadow: 0 0 10px 0 #0a0a0a;
+          margin-top: 6px;
+          margin-bottom:6px;
+        }
+        div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area .sp-lcp-item:hover .sp-lcp-item-border,
+        div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area .sp-lcp-item:hover.sp-lcp-item-border{
+          -webkit-box-shadow: 0 0 10px 0 #0a0a0a;
+          -moz-box-shadow:: 0 0 10px 0 #0a0a0a;
+          box-shadow: 0 0 10px 0 #0a0a0a;
+        }
+        
+        div.sp-logo-carousel-pro-section.layout-carousel.lcp_horizontal div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area .slick-list{
+          margin-left: 0;
+          margin-right: 0;
+        }
+        div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area [class*="lcp-col-"]{
+          margin-bottom: 6px;
+        }div.sp-logo-carousel-pro-section div#sp-logo-carousel-pro604b166fb6044 [class*="lcp-col"]{
+          margin: 0;
+          box-shadow: none;
+        }
+        div.sp-logo-carousel-pro-section.layout-grid div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area [class*="lcp-col"],
+        div.sp-logo-carousel-pro-section.layout-filter div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area [class*="lcp-col"]{
+          padding-left: 10px;
+          padding-right: 10px;
+          padding-bottom: 20px;
+        }
+        div.sp-logo-carousel-pro-section.layout-grid div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area.lcp-container,
+        div.sp-logo-carousel-pro-section.layout-filter div#sp-logo-carousel-pro604b166fb6044.sp-logo-carousel-pro-area.lcp-container{
+          margin-left: -10px;
+          margin-right: -10px;
+          margin-bottom: -20px;
+        }
+        
+        .sp-logo-carousel-pro-section.sp-lcpro-id-105741{
+          position: relative;
+        }
+        #lcp-preloader-105741{
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 100%;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: #fff;
+          z-index: 9999;
+        }
+        </style><div class="sp-logo-carousel-pro-section layout-carousel sp-lcpro-id-105741 sp-logo-section-id-604b166fb6044 nav_position_top_right title_position_bottom sp-lcpro-clear lcp_horizontal">
+          <div id="sp-logo-carousel-pro604b166fb6044" class="sp-logo-carousel-pro-area lcp-preloader mode_ticker " data-minslide="1" data-maxslide="1" data-slidewidth="" data-slidemargin="20" data-speed="30000" data-mode="horizontal" data-direction="prev" data-tickerhover="false">
+        <div style="margin: 35px;" class="sp-lcp-item text-center"><div class="sp-lcp-item-border"><div class="sp-lcp-logo-wrapper"><img src="img/partners/eset.png" alt="ESET"></div></div>
+          </div>
+        <div style="margin: 35px;" class="sp-lcp-item text-center"><div class="sp-lcp-item-border"><div class="sp-lcp-logo-wrapper"><img src="img/partners/sophos.png" alt="Sophos"></div></div>
+        </div>
+        <div style="margin: 35px;" class="sp-lcp-item text-center"><div class="sp-lcp-item-border"><div class="sp-lcp-logo-wrapper"><img src="img/partners/ui.png" alt="UIpath"></div></div>
+          </div>
+        <div style="margin: 35px;" class="sp-lcp-item text-center"><div class="sp-lcp-item-border"><div class="sp-lcp-logo-wrapper"><img src="img/partners/bp.png" alt="Blue Prism"></div></div>
+          </div>
+        <div style="margin: 35px;" class="sp-lcp-item text-center"><div class="sp-lcp-item-border"><div class="sp-lcp-logo-wrapper"><img src="img/partners/cark.png" alt="Cyberark"></div></div>
+          </div>
+        <div style="margin: 35px;" class="sp-lcp-item text-center"><div class="sp-lcp-item-border"><div class="sp-lcp-logo-wrapper"><img src="img/partners/cs.png" alt=""></div></div>
+          </div>
+        </div><br />
+      </section>   
+
+      <!-- Team-->
+      <section class="container mb-5 pb-3 pb-lg-0 mb-lg-7">
+        <h2 class="pb-4 mb-4 text-center">People behind our success</h2>
+        <div class="row mb-3">
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card card-curved-body card-hover border-0 box-shadow mx-auto" style="max-width: 21rem;"><a class="card-floating-icon" href="mailto:ceo@techtip.com"><i class="fe-mail"></i></a>
+              <div class="card-img-top card-img-gradient"><img src="img/team/01.jpg" alt="TechTip"/>
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h6 card-title mb-2">TechTip</h3>
+                <p class="font-size-xs text-body mb-0">CEO, Co-Founder</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card card-curved-body card-hover border-0 box-shadow mx-auto" style="max-width: 21rem;"><a class="card-floating-icon" href="mailto:cto@techtip.com"><i class="fe-mail"></i></a>
+              <div class="card-img-top card-img-gradient"><img src="img/team/01.jpg" alt="TechTip"/>
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h6 card-title mb-2">TechTip</h3>
+                <p class="font-size-xs text-body mb-0">CTO, Co-Founder</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card card-curved-body card-hover border-0 box-shadow mx-auto" style="max-width: 21rem;"><a class="card-floating-icon" href="mailto:marketdirector@techtip.com"><i class="fe-mail"></i></a>
+              <div class="card-img-top card-img-gradient"><img src="img/team/01.jpg" alt="TechTip"/>
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h6 card-title mb-2">TechTip</h3>
+                <p class="font-size-xs text-body mb-0">Director of Marketing</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-md-4 col-sm-6 mb-grid-gutter">
+            <div class="card card-curved-body card-hover border-0 box-shadow mx-auto" style="max-width: 21rem;"><a class="card-floating-icon" href="mailto:findirector@techtip.com"><i class="fe-mail"></i></a>
+              <div class="card-img-top card-img-gradient"><img src="img/team/01.jpg" alt="TechTip"/>
+              </div>
+              <div class="card-body text-center">
+                <h3 class="h6 card-title mb-2">TechTip</h3>
+                <p class="font-size-xs text-body mb-0">Financial Director</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer-->
+    <footer
+      class="cs-footer jarallax bg-dark pt-5 pt-md-6 pt-lg-7"
+      data-jarallax
+      data-speed="0.3"
+    >
+      <div  
+        class="jarallax-img"
+        style="background-image: url(img/demo/web-studio/cubes-bg.png)"
+      ></div>
+      <div class="container pt-3 pt-md-0">
+        <div class="row pb-2">
+
+          <div class="col-xl-3 col-lg-4 offset-xl-3 offset-lg-1 col-md-5 mb-5">
+            <h2 class="text-light pb-2">Contacts</h2>
+            <ul class="list-unstyled font-size-sm mb-4 pb-2">
+              <li>
+                <a
+                  class="nav-link-style nav-link-light"
+                  href="mailto:hello@techtip.co.zw"
+                  >contact@techtip.com</a
+                >
+              </li>
+              <li>
+                <a class="nav-link-style nav-link-light" href="tel:+263 71 290 9754"
+                  >+263 71 290 9754</a
+                >
+              </li>
+              <li>
+                <a class="nav-link-style nav-link-light" href="tel:+263 24 270 3668"
+                  >Land line: +263 24 270 3668</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div style = "margin: 0 auto;" class="col-xl-3 col-lg-4 offset-xl-3 offset-lg-1 col-md-5 mb-5">
+             <h3 class="h6 pb-2 text-light">Or connect with us on:</h3>
+            <a class="social-btn sb-facebook sb-light sb-lg mr-2 mb-2" href="#"
+              ><i class="fe-facebook"></i></a
+            ><a class="social-btn sb-twitter sb-light sb-lg mr-2 mb-2" href="#"
+              ><i class="fe-twitter"></i></a
+            ><a
+              class="social-btn sb-instagram sb-light sb-lg mr-2 mb-2"
+              href="#"
+              ><i class="fe-instagram"></i></a
+            >
+          </div>
+        </div>
+        <p style = "margin: 0 auto;" class="font-size-sm text-center pb-2 mb-4">
+          <span class="text-light opacity-50 mr-1"
+            >© All rights reserved by TechTip (Pvt-ltd)</span>
+        </p>
+      </div>
+    </footer>
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll><span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2">Top</span><i class="btn-scroll-top-icon fe-arrow-up">   </i></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="vendor/lightgallery.js/dist/js/lightgallery.min.js"></script>
+    <script src="vendor/lg-video.js/dist/lg-video.min.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+
+</html>

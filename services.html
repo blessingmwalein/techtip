@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Home | TechTip</title>
+    <!-- SEO Meta Tags-->
+    <meta
+      name="description"
+      content="TechTip - Multipurpose Bootstrap Template"
+    />
+    <meta
+      name="keywords"
+      content="bootstrap, business, consulting, coworking space, services, creative agency, dashboard, e-commerce, mobile app showcase, multipurpose, product landing, shop, software, ui kit, web studio, landing, html5, css3, javascript, gallery, slider, touch, creative"
+    />
+    <meta name="author" content="Createx Studio" />
+    <!-- Viewport-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Favicon and Touch Icons-->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="logo-icon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="mask-icon" color="#5bbad5" href="safari-pinned-tab.svg" />
+    <link rel="stylesheet" href="./floating/floating-wpp.min.css">  
+    <meta name="msapplication-TileColor" content="#766df4" />
+    <meta name="theme-color" content="#ffffff" />
+    <!-- Page loading styles-->
+    <style>
+      .cs-page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .cs-page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .cs-page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
+        opacity: 0;
+      }
+      .cs-page-loading.active > .cs-page-loading-inner {
+        opacity: 1;
+      }
+      .cs-page-loading-inner > span {
+        display: block;
+        font-family: "Inter", sans-serif;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #1c1c1f;
+      }
+      .cs-page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: 0.75rem;
+        vertical-align: text-bottom;
+        border: 0.15em solid #1c1c1f;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+    <!-- Page loading scripts-->
+    <script>
+      (function () {
+        window.onload = function () {
+          var preloader = document.querySelector(".cs-page-loading");
+          preloader.classList.remove("active");
+          setTimeout(function () {
+            preloader.remove();
+          }, 2000);
+        };
+      })();
+    </script>
+    <!-- Vendor Styles-->
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="vendor/simplebar/dist/simplebar.min.css"
+    />
+    <!-- Main Theme Styles + Bootstrap-->
+    <link rel="stylesheet" media="screen" href="css/theme.min.css" />
+    <!-- Google Tag Manager-->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "../www.googletagmanager.com/gtm5445.html?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-WKV3GT5");
+    </script>
+  </head>
+  <!-- Body-->
+  <body>
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+      <iframe
+        src="http://www.googletagmanager.com/ns.html?id=GTM-WKV3GT5"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe>
+    </noscript>
+    <!-- Page loading spinner-->
+    <div class="cs-page-loading active">
+      <div class="cs-page-loading-inner">
+        <div class="cs-page-spinner"></div>
+        <span>Loading...</span>
+      </div>
+    </div>
+    <main class="cs-page-wrapper">
+      <!-- Sign In Modal-->
+      <div class="modal fade" id="modal-signin" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content border-0">
+            <div class="cs-view show" id="modal-signin-view">
+              <div class="modal-header border-0 bg-dark px-4">
+                <h4 class="modal-title text-light">Sign in</h4>
+                <button
+                  class="close text-light"
+                  type="button"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body px-4">
+                <p class="font-size-ms text-muted">
+                  Sign in to your account using email and password provided
+                  during registration.
+                </p>
+                <form class="needs-validation" novalidate>
+                  <div class="input-group-overlay form-group">
+                    <div class="input-group-prepend-overlay">
+                      <span class="input-group-text"
+                        ><i class="fe-mail"></i
+                      ></span>
+                    </div>
+                    <input
+                      class="form-control prepended-form-control"
+                      type="email"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+                  <div
+                    class="input-group-overlay cs-password-toggle form-group"
+                  >
+                    <div class="input-group-prepend-overlay">
+                      <span class="input-group-text"
+                        ><i class="fe-lock"></i
+                      ></span>
+                    </div>
+                    <input
+                      class="form-control prepended-form-control"
+                      type="password"
+                      placeholder="Password"
+                      required
+                    />
+                    <label class="cs-password-toggle-btn">
+                      <input class="custom-control-input" type="checkbox" /><i
+                        class="fe-eye cs-password-toggle-indicator"
+                      ></i
+                      ><span class="sr-only">Show password</span>
+                    </label>
+                  </div>
+                  <div
+                    class="d-flex justify-content-between align-items-center form-group"
+                  >
+                    <div class="custom-control custom-checkbox">
+                      <input
+                        class="custom-control-input"
+                        type="checkbox"
+                        id="keep-signed"
+                      />
+                      <label class="custom-control-label" for="keep-signed"
+                        >Keep me signed in</label
+                      >
+                    </div>
+                    <a
+                      class="nav-link-style font-size-ms"
+                      href="password-recovery.html"
+                      >Forgot password?</a
+                    >
+                  </div>
+                  <button class="btn btn-primary btn-block" type="submit">
+                    Sign in
+                  </button>
+                  <p class="font-size-sm pt-3 mb-0">
+                    Don't have an account?
+                    <a
+                      href="#"
+                      class="font-weight-medium"
+                      data-view="#modal-signup-view"
+                      >Sign up</a
+                    >
+                  </p>
+                </form>
+              </div>
+            </div>
+            <div class="cs-view" id="modal-signup-view">
+              <div class="modal-header border-0 bg-dark px-4">
+                <h4 class="modal-title text-light">Sign up</h4>
+                <button
+                  class="close text-light"
+                  type="button"
+                  data-dismiss="modal"
+                  aria-label="Close"
+                >
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body px-4">
+                <p class="font-size-ms text-muted">
+                  Registration takes less than a minute but gives you full
+                  control over your orders.
+                </p>
+                <form class="needs-validation" novalidate>
+                  <div class="form-group">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Full name"
+                      required
+                    />
+                  </div>
+                  <div class="form-group">
+                    <input
+                      class="form-control"
+                      type="text"
+                      placeholder="Email"
+                      required
+                    />
+                  </div>
+                  <div class="cs-password-toggle form-group">
+                    <input
+                      class="form-control"
+                      type="password"
+                      placeholder="Password"
+                      required
+                    />
+                    <label class="cs-password-toggle-btn">
+                      <input class="custom-control-input" type="checkbox" /><i
+                        class="fe-eye cs-password-toggle-indicator"
+                      ></i
+                      ><span class="sr-only">Show password</span>
+                    </label>
+                  </div>
+                  <div class="cs-password-toggle form-group">
+                    <input
+                      class="form-control"
+                      type="password"
+                      placeholder="Confirm password"
+                      required
+                    />
+                    <label class="cs-password-toggle-btn">
+                      <input class="custom-control-input" type="checkbox" /><i
+                        class="fe-eye cs-password-toggle-indicator"
+                      ></i
+                      ><span class="sr-only">Show password</span>
+                    </label>
+                  </div>
+                  <button class="btn btn-primary btn-block" type="submit">
+                    Sign up
+                  </button>
+                  <p class="font-size-sm pt-3 mb-0">
+                    Already have an account?
+                    <a
+                      href="#"
+                      class="font-weight-medium"
+                      data-view="#modal-signin-view"
+                      >Sign in</a
+                    >
+                  </p>
+                </form>
+              </div>
+            </div>
+            <div class="modal-body text-center px-4 pt-2 pb-4">
+              <hr />
+              <p class="font-size-sm font-weight-medium text-heading pt-4">
+                Or sign in with
+              </p>
+              <a class="social-btn sb-facebook sb-lg mx-1 mb-2" href="#"
+                ><i class="fe-facebook"></i></a
+              ><a class="social-btn sb-twitter sb-lg mx-1 mb-2" href="#"
+                ><i class="fe-twitter"></i></a
+              ><a class="social-btn sb-instagram sb-lg mx-1 mb-2" href="#"
+                ><i class="fe-instagram"></i></a
+              ><a class="social-btn sb-google sb-lg mx-1 mb-2" href="#"
+                ><i class="fe-google"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Navbar Floating light for Index page only-->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page.-->
+      <header
+        class="cs-header navbar navbar-expand-lg navbar-dark navbar-floating navbar-sticky"
+      >
+        <div class="container px-0 px-xl-3">
+          <button
+            class="navbar-toggler ml-n2 mr-2"
+            type="button"
+            data-toggle="offcanvas"
+            data-offcanvas-id="primaryMenu"
+          >
+            <span class="navbar-toggler-icon"></span></button
+          ><a
+            class="navbar-brand order-lg-1 mx-auto ml-lg-0 pr-lg-2 mr-lg-4"
+            href="index.html"
+            ><img
+              class="navbar-floating-logo d-none d-lg-block"
+              width="153"
+              src="img/logo/logo-lightt.png"
+              alt="TechTip" /><img
+              class="navbar-stuck-logo"
+              width="153"
+              src="img/logo/logo-dark.png"
+              alt="TechTip" /><img
+              class="d-lg-none"
+              width="58"
+              src="img/ttip.png"
+              alt="TechTip"
+          /></a>
+          <div  class="d-flex align-items-center order-lg-3 ml-lg-auto">
+            <a
+            class="btn btn-primary"
+            href="#"
+            target="_blank"
+            rel="noopener"
+            style="opacity: 0;"
+            style="background-color: #080808;"           
+            ><i class="fe-shopping-cart font-size-lg mr-2"></i>Support
+            <span class="d-none d-lg-inline">Us</span></a
+          >
+          </div>
+          <div class="cs-offcanvas-collapse order-lg-2" id="primaryMenu">
+            <div class="cs-offcanvas-cap navbar-box-shadow">
+              <h5 class="mt-1 mb-0">Menu</h5>
+              <button
+                class="close lead"
+                type="button"
+                data-toggle="offcanvas"
+                data-offcanvas-id="primaryMenu"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="cs-offcanvas-body">
+              <!-- Menu-->
+              <ul class="navbar-nav">
+                <li class="nav-item dropdown dropdown-mega">
+                  <a
+                    class="nav-link dropdown-toggle"
+                    href="services.html"
+                    data-toggle="dropdown"
+                    >Services</a
+                  >
+                  <div class="dropdown-menu" style="margin-left: -100">
+                    <div class="dropdown-column">
+                      <a class="dropdown-item" href="managed_ict_services.html"
+                        ><h6>Managed ICT Services</h6></a
+                      ><a
+                        class="dropdown-item"
+                        href="cyber_security.html"
+                        >Cyber Security</a
+                      ><a class="dropdown-item" href="signiture_system.html"
+                        >Electronic Signiture System</a
+                      ><a
+                        class="dropdown-item"
+                        href="project_management.html"
+                        >Project Management</a
+                      ><a 
+                      class="dropdown-item" 
+                      href="contact.html"
+                        >ICT Consultancy</a
+                      >
+                    </div>
+                    <div class="dropdown-column">
+                      <a class="dropdown-item" href="technology_solutions.html">
+                          <h6>Technology Solutions</h6>
+                      </a><a 
+                      class="dropdown-item" 
+                      href="robot_automation.html">
+                      Robot Process Automation</a>
+                                            <a 
+                      class="dropdown-item" 
+                      href="contact.html">Helpdesk And Technical Communities</a>
+                  </div>
+                  <div class="dropdown-column">
+                      <a class="dropdown-item" 
+                      href="cloud_solutions.html">
+                          <h6>Cloud Solutions</h6>
+                      </a>
+                      <a class="dropdown-item"
+                          href="cloud_solutions.html">Hosted Cloud Services</a>
+                  </div>
+                  <div class="dropdown-column">
+                      <a class="dropdown-item" href="telecom_solutions.html">
+                          <h6>Telecom Solutions</h6>
+                      </a>
+
+                      <a class="dropdown-item" href="https://theconversation.com/africa/topics/cybersecurity-535">Cybersecurity Articles</a><a class="dropdown-item"
+                          href="contact.html">Events And Werbinars</a>
+                  </div>
+                  </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="about.html">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="contact.html">Contact Us</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <!-- Page content-->
+      <!-- Intro-->
+      <section
+        class="d-flex align-items-center position-relative bg-dark bg-size-cover bg-position-center fh-section overflow-hidden pt-6 pb-lg-5"
+        style="background-image: url(img/demo/presentation/intro/bg.png)"
+      >
+        <div class="container-fluid pt-4 pb-5 py-lg-5">
+          <div class="row align-items-center py-3">
+          	<div class="col-md-6"><img style="border-radius: 10px;" class="d-block mx-auto" src="img/demo/coworking/tip.png" alt="TechTip">
+          </div>
+            <div class="col-xl-6 col-lg-5 d-flex justify-content-end">
+              <div
+                class="pt-2 mx-auto mb-5 mb-lg-0 ml-lg-0 mr-xl-7 text-center text-lg-left"
+                style="max-width: 495px"
+              >
+                <h1 class="display-4 text-light pb-2">
+                  <span class="font-weight-light">WE OFFER A WIDE RANGE OF </span
+                  >SERVICES
+                </h1>
+                <p
+                  class="h4 font-weight-light text-light opacity-70 line-height-base"
+                >
+                  We assist organizations of all sizes to accelerate IT and drive business transformation by utilizing world-class private and public services.
+                </p>
+                <hr class="hr-light mb-5" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Demos-->
+      <!-- Services-->
+      <section class="container py-5 py-md-6 py-lg-7">
+                <div class="col-sm-6" style="margin: auto; position: relative; left: 0px;">
+                  <div
+                    class="bg-light box-shadow-lg rounded-lg p-4 mb-grid-gutter text-center text-sm-left"
+                  >
+                    <img
+                      class="d-inline-block mb-4 mt-2"
+                      width="100"
+                      src="img/demo/marketing-seo/services/svc.svg"
+                      alt="Icon"
+                    />
+                    <h3 class="h5 mb-2">Cyber Security</h3>
+                    <p class="font-size-sm">
+                      We provide protection to endpoints, data centers, networks, and cloud environments. Try us. Stay on top of the emerging cyber threats with our integrated security platform. We do attack surface visibility as well as cyber awareness and advisory.
+                    </p>
+                    <a style="background-color: #080808;" class="btn btn-primary" href="cyber_security.html">Visit</a>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin: auto; position: relative; right: 0px;">
+                  <div
+                    class="bg-light box-shadow-lg rounded-lg p-4 mb-grid-gutter text-center text-sm-left"
+                  >
+                    <img
+                      class="d-inline-block mb-4 mt-2"
+                      width="100"
+                      src="img/demo/marketing-seo/services/svc.svg"
+                      alt="Icon"
+                    />
+                    <h3 class="h5 mb-2">Robot process automation</h3>
+                    <p class="font-size-sm">
+                      We designed our product portfolio to ensure you realize your automation goals and achieve the best return on your investment. From assessment and implementation to process analysis and lifecycle management, our products put you on the fastest path to value.
+                    </p>
+                    <a style="background-color: #080808;" class="btn btn-primary" href="robot_automation.html">Visit</a>
+                  </div>
+                </div>
+              <div class="col-sm-6" style="margin: auto; position: relative; left: 0px;">
+                  <div
+                    class="bg-light box-shadow-lg rounded-lg p-4 mb-grid-gutter text-center text-sm-left"
+                  >
+                    <img
+                      class="d-inline-block mb-4 mt-2"
+                      width="100"
+                      src="img/demo/marketing-seo/services/svc.svg"
+                      alt="Icon"
+                    />
+                    <h3 class="h5 mb-2">Electronic Signature system</h3>
+                    <p class="font-size-sm">
+                      An e-signature or electronic signature is a legal way to get consent or approval on electronic documents or forms. It can replace a handwritten signature in virtually any process.
+                    </p>
+                    <a style="background-color: #080808;" class="btn btn-primary" href="signiture_system.html">Visit</a>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin: auto; position: relative; right: 0px;">
+                  <div
+                    class="bg-light box-shadow-lg rounded-lg p-4 mb-grid-gutter text-center text-sm-left"
+                  >
+                    <img
+                      class="d-inline-block mb-4 mt-2"
+                      width="100"
+                      src="img/demo/marketing-seo/services/svc.svg"
+                      alt="Icon"
+                    />
+                    <h3 class="h5 mb-2">ICT consultancy, Project management </h3>
+                    <p class="font-size-sm">
+                      We provide end-to-end PMI-based management consulting services that form the basic buiding blocks required for implementing Enterprise IT projects.
+                    </p>
+                    <a style="background-color: #080808;" class="btn btn-primary" href="contact.html">Visit</a>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin: auto; position: relative; left: 0px;">
+                  <div
+                    class="bg-light box-shadow-lg rounded-lg p-4 mb-grid-gutter text-center text-sm-left"
+                  >
+                    <img
+                      class="d-inline-block mb-4 mt-2"
+                      width="100"
+                      src="img/demo/marketing-seo/services/svc.svg"
+                      alt="Icon"
+                    />
+                    <h3 class="h5 mb-2">Helpdesk and Technical communities</h3>
+                    <p class="font-size-sm">
+                      In order to streamline support requests and better serve you, we utilize a support ticket system. Every support request is assigned a unique ticket number which you can use to track the progress and responses online.
+                    </p>
+                    <a style="background-color: #080808;" class="btn btn-primary" href="contact.html">Visit</a>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin: auto; position: relative; right: 0px;">
+                  <div
+                    class="bg-light box-shadow-lg rounded-lg p-4 mb-grid-gutter text-center text-sm-left"
+                  >
+                    <img
+                      class="d-inline-block mb-4 mt-2"
+                      width="100"
+                      src="img/demo/marketing-seo/services/svc.svg"
+                      alt="Icon"
+                    />
+                    <h3 class="h5 mb-2">Hosted cloud services</h3>
+                    <p class="font-size-sm">
+                      We assist organizations of all sizes to accelerate IT and
+                      drive business transformation by utilizing world-class
+                      private and public cloud solutions, including robot process automation, electronic signiture system etc.
+                    </p>
+                    <a style="background-color: #080808;" class="btn btn-primary" href="contact.html">Visit</a>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin: auto; position: relative; left: 0px;">
+                  <div
+                    class="bg-light box-shadow-lg rounded-lg p-4 mb-grid-gutter text-center text-sm-left"
+                  >
+                    <img
+                      class="d-inline-block mb-4 mt-2"
+                      width="100"
+                      src="img/demo/marketing-seo/services/svc.svg"
+                      alt="Icon"
+                    />
+                    <h3 class="h5 mb-2">Cybersecurity Articles</h3>
+                    <p class="font-size-sm">
+                      Focusing on cyberspace security issues, this open access journal Cybersecurity publishes high quality research and expert reviews to report the latest cyber news.
+                    </p>
+                    <a style="background-color: #080808;" class="btn btn-primary" href="https://theconversation.com/africa/topics/cybersecurity-535">Visit</a>
+                  </div>
+                </div>
+                <div class="col-sm-6" style="margin: auto; position: relative; right: 0px;">
+                  <div
+                    class="bg-light box-shadow-lg rounded-lg p-4 mb-grid-gutter text-center text-sm-left"
+                  >
+                    <img
+                      class="d-inline-block mb-4 mt-2"
+                      width="100"
+                      src="img/demo/marketing-seo/services/svc.svg"
+                      alt="Icon"
+                    />
+                    <h3 class="h5 mb-2">Events & Webinars</h3>
+                    <p class="font-size-sm">
+                      Online events are amazing opportunities to have fun and learn. Find a new online course, a fun live stream, or an insightful webinar on our website.
+                    </p>
+                    <a style="background-color: #080808;" class="btn btn-primary" href="contact.html">Visit</a>
+                  </div>
+                </div>
+      </section>
+    </main>
+    <!-- Footer-->
+    <footer
+      class="cs-footer jarallax bg-dark pt-5 pt-md-6 pt-lg-7"
+      data-jarallax
+      data-speed="0.3"
+    >
+      <div  
+        class="jarallax-img"
+        style="background-image: url(img/demo/web-studio/cubes-bg.png)"
+      ></div>
+      <div class="container pt-3 pt-md-0">
+        <div class="row pb-2">
+
+          <div class="col-xl-3 col-lg-4 offset-xl-3 offset-lg-1 col-md-5 mb-5">
+            <h2 class="text-light pb-2">Contacts</h2>
+            <ul class="list-unstyled font-size-sm mb-4 pb-2">
+              <li>
+                <a
+                  class="nav-link-style nav-link-light"
+                  href="mailto:hello@techtip.co.zw"
+                  >contact@techtip.com</a
+                >
+              </li>
+              <li>
+                <a class="nav-link-style nav-link-light" href="tel:+263 71 290 9754"
+                  >+263 71 290 9754</a
+                >
+              </li>
+              <li>
+                <a class="nav-link-style nav-link-light" href="tel:+263 24 270 3668"
+                  >Land line: +263 24 270 3668</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div style = "margin: 0 auto;" class="col-xl-3 col-lg-4 offset-xl-3 offset-lg-1 col-md-5 mb-5">
+             <h3 class="h6 pb-2 text-light">Or connect with us on:</h3>
+            <a class="social-btn sb-facebook sb-light sb-lg mr-2 mb-2" href="#"
+              ><i class="fe-facebook"></i></a
+            ><a class="social-btn sb-twitter sb-light sb-lg mr-2 mb-2" href="#"
+              ><i class="fe-twitter"></i></a
+            ><a
+              class="social-btn sb-instagram sb-light sb-lg mr-2 mb-2"
+              href="#"
+              ><i class="fe-instagram"></i></a
+            >
+          </div>
+        </div>
+        <p style = "margin: 0 auto;" class="font-size-sm text-center pb-2 mb-4">
+          <span class="text-light opacity-50 mr-1"
+            >© All rights reserved by TechTip (Pvt-ltd)</span>
+        </p>
+      </div>
+    </footer> 
+
+    <!-- Back to top button--><a class="btn-scroll-top" href="#top" data-scroll
+      ><span class="btn-scroll-top-tooltip text-muted font-size-sm mr-2"
+        >Top</span
+      ><i class="btn-scroll-top-icon fe-arrow-up"> </i
+    ></a>
+    <!-- Vendor scrits: js libraries and plugins-->
+    <script src="vendor/jquery/dist/jquery.slim.min.js"></script>
+    <script src="vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="vendor/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+    <script src="vendor/simplebar/dist/simplebar.min.js"></script>
+    <script src="vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="vendor/parallax-js/dist/parallax.min.js"></script>
+    <script type="text/javascript" src="./floating/floating-wpp.min.js"></script>
+    <script src="./js/app.js"></script>
+    <!-- Main theme script-->
+    <script src="js/theme.min.js"></script>
+  </body>
+</html>
